@@ -1,0 +1,280 @@
+/* ------------------------------------------------------------------ */
+/* Hero — centered layout                                              */
+/* ------------------------------------------------------------------ */
+
+.hero--centered {
+    display: block;
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+}
+
+.hero-center {
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+/* Badge pill */
+.hero-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 1.1rem;
+    background: #eaf4ee;
+    border: 1px solid #b5d9c4;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    color: #2a6e47;
+    font-weight: 500;
+}
+
+.hero-pill-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #2a6e47;
+    flex-shrink: 0;
+}
+
+/* Headline */
+.hero-heading {
+    font-family: var(--font-body);
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--ink);
+}
+
+.hero-heading-green {
+    color: #2a7a4f;
+}
+
+/* Subtitle */
+.hero-sub {
+    font-size: 1.05rem;
+    color: var(--ink-muted);
+    line-height: 1.75;
+    max-width: 560px;
+}
+
+/* Buttons */
+.hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.hero-btn-dark {
+    display: inline-block;
+    padding: 0.8rem 1.75rem;
+    background: var(--ink);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: opacity 0.2s ease;
+}
+
+.hero-btn-dark:hover {
+    opacity: 0.82;
+}
+
+/* ------------------------------------------------------------------ */
+/* Mock dashboard card                                                 */
+/* ------------------------------------------------------------------ */
+
+.mock-dash {
+    width: 100%;
+    max-width: 700px;
+    background: #f0ede8;
+    border-radius: 16px;
+    border: 1px solid #e0dbd2;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.mock-dash-titlebar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px 16px;
+}
+
+.mock-dot-red,
+.mock-dot-yellow,
+.mock-dot-green {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.mock-dot-red    { background: #ff5f57; }
+.mock-dot-yellow { background: #febc2e; }
+.mock-dot-green  { background: #28c840; }
+
+/* Stats row */
+.mock-dash-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 0 12px 10px;
+}
+
+.mock-stat {
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #e8e4dc;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: left;
+}
+
+.mock-stat-label {
+    font-size: 0.73rem;
+    color: #aaa;
+    font-weight: 400;
+}
+
+.mock-stat-val {
+    font-size: 1.45rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.mock-stat-large {
+    font-size: 1.9rem;
+}
+
+.mock-stat-note {
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.mock-note-red   { color: #e53935; }
+.mock-note-green { color: #2a7a4f; }
+.mock-note-gray  { color: #bbb; }
+
+/* Category bars */
+.mock-dash-cats {
+    background: #fff;
+    margin: 0 12px 12px;
+    border-radius: 10px;
+    border: 1px solid #e8e4dc;
+    padding: 16px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    text-align: left;
+}
+
+.mock-cat-row {
+    display: grid;
+    grid-template-columns: 52px 1fr;
+    align-items: center;
+    gap: 14px;
+}
+
+.mock-cat-name {
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    text-align: right;
+}
+
+.mock-cat-track {
+    height: 8px;
+    background: #e8e4dc;
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.mock-cat-fill {
+    height: 100%;
+    border-radius: 999px;
+}
+
+.mock-fill-orange { background: #d4a017; }
+.mock-fill-blue   { background: #4a86c8; }
+.mock-fill-purple { background: #7c6bc4; }
+
+/* ------------------------------------------------------------------ */
+/* Video modal                                                         */
+/* ------------------------------------------------------------------ */
+
+.video-modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 200;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.video-modal--open {
+    display: flex;
+}
+
+.video-modal-box {
+    position: relative;
+    width: 100%;
+    max-width: 860px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.video-modal-close {
+    position: absolute;
+    top: 0.6rem;
+    right: 0.75rem;
+    z-index: 10;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1.75rem;
+    line-height: 1;
+    cursor: pointer;
+    opacity: 0.75;
+    transition: opacity 0.15s ease;
+}
+
+.video-modal-close:hover {
+    opacity: 1;
+}
+
+.video-modal-embed {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+
+.video-modal-embed iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* ------------------------------------------------------------------ */
+/* Responsive                                                          */
+/* ------------------------------------------------------------------ */
+
+@media (max-width: 600px) {
+    .hero--centered {
+        padding: 3rem 1rem 2rem;
+    }
+
+    .mock-dash-stats {
+        grid-template-columns: 1fr;
+    }
+}
