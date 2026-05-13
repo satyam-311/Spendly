@@ -525,6 +525,48 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ------------------------------------------------------------------ */
+/* Legal pages (Terms, Privacy)                                        */
+/* ------------------------------------------------------------------ */
+
+.legal-page {
+    padding: 4rem 2rem;
+}
+
+.legal-inner {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.legal-title {
+    font-family: var(--serif);
+    font-size: 2.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.legal-meta {
+    font-size: 0.8rem;
+    color: var(--ink-faint);
+    margin-bottom: 3rem;
+}
+
+.legal-section {
+    margin-bottom: 2rem;
+}
+
+.legal-section h2 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.legal-section p {
+    font-size: 0.95rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+/* ------------------------------------------------------------------ */
 /* Responsive                                                          */
 /* ------------------------------------------------------------------ */
 
