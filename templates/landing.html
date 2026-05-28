@@ -4,6 +4,14 @@
 
 {% block content %}
 
+{% if session.get('user_id') %}
+<div class="welcome-banner">
+    <span class="welcome-banner-dot"></span>
+    Welcome back, <strong>{{ session.get('user_name') }}</strong> —
+    <a href="{{ url_for('profile') }}">view your profile</a>
+</div>
+{% endif %}
+
 <section class="hero hero--centered">
     <div class="hero-center">
         <div class="hero-pill">

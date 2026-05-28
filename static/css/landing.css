@@ -102,6 +102,7 @@ a { color: inherit; text-decoration: none; }
 
 .nav-links a { color: var(--ink-muted); transition: color 0.2s; }
 .nav-links a:hover { color: var(--ink); }
+.nav-user-name { color: var(--ink-muted); }
 
 .nav-cta {
     background: var(--ink) !important;
@@ -121,6 +122,34 @@ a { color: inherit; text-decoration: none; }
 
 /* ------------------------------------------------------------------ */
 /* Hero                                                                */
+/* ------------------------------------------------------------------ */
+/* Welcome banner (logged-in users on landing)                         */
+/* ------------------------------------------------------------------ */
+
+.welcome-banner {
+    background: var(--accent-light);
+    border-bottom: 1px solid var(--border);
+    padding: 0.6rem 2rem;
+    font-size: 0.875rem;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.welcome-banner strong { color: var(--ink); font-weight: 600; }
+
+.welcome-banner a { color: var(--accent); font-weight: 500; }
+.welcome-banner a:hover { text-decoration: underline; }
+
+.welcome-banner-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    flex-shrink: 0;
+}
+
 /* ------------------------------------------------------------------ */
 
 .hero--centered {

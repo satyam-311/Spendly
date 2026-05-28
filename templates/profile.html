@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}My Profile — Spendly{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+
+<section class="profile-section">
+    <div class="profile-inner">
+
+        <div class="profile-header">
+            <div class="profile-avatar">{{ user['name'][0].upper() }}</div>
+            <div>
+                <h1 class="profile-title">Welcome back, {{ user['name'] }}</h1>
+                <p class="profile-subtitle">Here's your Spendly account overview</p>
+            </div>
+        </div>
+
+        <div class="profile-grid">
+
+            <div class="profile-card">
+                <div class="profile-card-label">Account</div>
+                <div class="profile-field">
+                    <span class="profile-field-key">Full name</span>
+                    <span class="profile-field-val">{{ user['name'] }}</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-field-key">Email address</span>
+                    <span class="profile-field-val">{{ user['email'] }}</span>
+                </div>
+                <div class="profile-field">
+                    <span class="profile-field-key">Member since</span>
+                    <span class="profile-field-val">{{ user['created_at'][:10] }}</span>
+                </div>
+            </div>
+
+            <div class="profile-card profile-card--muted">
+                <div class="profile-card-label">Expenses</div>
+                <p class="profile-coming-soon">
+                    Expense tracking is coming in the next step.<br>
+                    You'll be able to add, edit, and review all your spending here.
+                </p>
+            </div>
+
+        </div>
+
+        <div class="profile-actions">
+            <a href="{{ url_for('logout') }}" class="btn-primary">Sign out</a>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}
