@@ -525,6 +525,117 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ------------------------------------------------------------------ */
+/* Profile / Dashboard page                                            */
+/* ------------------------------------------------------------------ */
+
+.profile-section {
+    padding: 3rem 2rem 5rem;
+}
+
+.profile-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.profile-avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--accent);
+    color: var(--paper);
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.profile-title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    color: var(--ink);
+    line-height: 1.2;
+}
+
+.profile-subtitle {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    margin-top: 0.2rem;
+}
+
+.profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.profile-card {
+    background: var(--paper-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    padding: 1.75rem;
+}
+
+.profile-card--muted {
+    background: var(--paper-warm);
+}
+
+.profile-card-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 1.25rem;
+}
+
+.profile-field {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid var(--border-soft);
+}
+
+.profile-field:last-child { border-bottom: none; }
+
+.profile-field-key {
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+}
+
+.profile-field-val {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--ink-soft);
+}
+
+.profile-coming-soon {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    line-height: 1.7;
+}
+
+.profile-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+@media (max-width: 600px) {
+    .profile-grid { grid-template-columns: 1fr; }
+    .profile-header { flex-direction: column; align-items: flex-start; }
+}
+
+/* ------------------------------------------------------------------ */
 /* Legal pages (Terms, Privacy)                                        */
 /* ------------------------------------------------------------------ */
 
