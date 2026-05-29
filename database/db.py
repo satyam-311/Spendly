@@ -101,3 +101,26 @@ def get_user_by_id(user_id):
         ).fetchone()
     finally:
         conn.close()
+
+
+def get_expense_stats(user_id):
+    conn = get_db()
+    try:
+        row = conn.execute(
+            "SELECT COUNT(*) AS total_count, "
+            "ROUND(COALESCE(SUM(amount), 0), 2) AS total_amount "
+            "FROM expenses WHERE user_id = ?",
+            (user_id,)
+        ).fetchone()
+        cat_row = conn.execute(
+            "SELECT category FROM expenses WHERE user_id = ? "
+            "GROUP BY category ORDER BY SUM(amount) DESC LIMIT 1",
+            (user_id,)
+        ).fetchone()
+        return {
+            "total_count":  row["total_count"],
+            "total_amount": row["total_amount"],
+            "top_category": cat_row["category"] if cat_row else "—",
+        }
+    finally:
+        conn.close()
